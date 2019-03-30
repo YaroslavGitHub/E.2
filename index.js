@@ -41,3 +41,18 @@ let phones = [{
 
 console.dir(phones);
 /***Write code after this line***/
+for (var i = 0; i < phones.length; i++) {
+    phones[i].price = +phones[i].price.slice(0, -2);
+}
+
+
+
+
+phones.sort(function (a, b) {
+    return a.price - b.price
+});
+
+
+console.log("Вывод после сортировки: ");
+	phones.forEach(function(element){ console.log(element);});
+	
