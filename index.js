@@ -46,11 +46,10 @@ for (var i = 0; i < phones.length; i++) {
 }
 
 
-
-
 phones.sort(function (a, b) {
     return a.price - b.price
 });
+
 var x = ' <li class="list-group-item d-flex justify-content-between align-items-center"><h5> '
 var y = ' </h5>'
 var z = ' <span class="badge badge-primary badge-pill">'
@@ -61,6 +60,7 @@ for (var i = 0; i < phones.length; i++) {
     var h = document.getElementById("div1");
     h.insertAdjacentHTML("afterend", x + phones[i].title + y + z + phones[i].price + " $" + a);
 }
+
 console.log("Вывод после сортировки: ");
 phones.forEach(function (element) {
     console.log(element);
